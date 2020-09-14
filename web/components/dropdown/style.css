@@ -1,0 +1,19 @@
+.as_dropdown
+    {
+    position: relative;
+}
+.as_dropdown > div select
+    {
+    padding: 12px 10px 7px 14px;
+    width: 400px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border:1px solid #166502;
+}
+.as_dropdown > div div.as_dropdown_label
+    {
+        margin-left: 10px;
+        position: absolute;
+        background: white;
+        padding: 0 8px;
+    }
