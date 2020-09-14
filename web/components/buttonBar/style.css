@@ -6,7 +6,7 @@
 .as_buttonBar > .as_buttonBar_button
 {
     background: #166502;
-    width: fit-content;
+    width: max-content;
     padding: 10px;
     border-radius: 5px;
 }

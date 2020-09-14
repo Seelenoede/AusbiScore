@@ -1,17 +1,19 @@
-.as_dropdown
+.as_textareafield
     {
         position: relative;
         margin: 15px 0;
     }
-.as_dropdown > div select
+.as_textareafield > div textarea
     {
-        padding: 12px 10px 7px 14px;
-        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 12px 10px 7px 16px;
         margin-top: 10px;
         border-radius: 5px;
-        border:1px solid #166502;
-}
-.as_dropdown > div div.as_dropdown_label
+        border: 1px solid #166502;
+        box-sizing: border-box;
+    }
+.as_textareafield > div div.as_textareafield_label
     {
         margin-left: 10px;
         position: absolute;
@@ -19,3 +21,4 @@
         padding: 0 8px;
         color: rgb(52, 159, 24);
     }
+

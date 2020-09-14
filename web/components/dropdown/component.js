@@ -14,8 +14,5 @@ Vue.component('as-dropdown', {
 				'</select>'+
 				'<div  v-if="value.error!=\'\'" class="as_dropdown_error">{{value.error}}</div>' +
 			'</div>' +
-		'</div>' +
-		'<style lang="scss">' +
-			'@import "style.css";'+
-		'</style>'
+		'</div>'
 });
