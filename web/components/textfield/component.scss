@@ -1,0 +1,22 @@
+.as_textfield
+{
+  position: relative;
+  > div
+  {
+    input
+    {
+      padding: 12px 10px 7px 16px;
+      width: 400px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border:1px solid red;
+    }
+    div.as_textfield_label
+    {
+      margin-left: 10px;
+      position: absolute;
+      background: white;
+      padding: 0 8px;
+    }
+  }
+}
