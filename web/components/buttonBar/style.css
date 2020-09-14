@@ -2,6 +2,10 @@
 {
     margin: 15px 0;
 }
+.as_buttonBar a
+{
+    cursor: pointer;
+}
 /*----------Style für Button-Bar-Links---------*/
 .as_buttonBar > .as_buttonBar_button
 {
@@ -12,7 +16,7 @@
 }
 .as_buttonBar > .as_buttonBar_button > a
 {
-    color: white;
+    color: #ffffff;
     text-decoration:none;
 }
 .as_buttonBar > .as_buttonBar_button > a:hover
@@ -21,3 +25,12 @@
 }
 
 /*----------Style für Funktionslinks---------*/
+
+.as_buttonBar > .as_buttonBar_link
+{
+    padding: 11px 0;
+}
+.as_buttonBar > .as_buttonBar_link > a
+{
+    color: #166502;
+}

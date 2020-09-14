@@ -5,16 +5,15 @@
     <title>Anmeldung</title>
     <link rel="stylesheet" href="../../components/textfield/style.css">
     <link rel="stylesheet" href="../../components/buttonBar/style.css">
-    <link rel="stylesheet" href="../../components/tabs/style.css">
+<!--    <link rel="stylesheet" href="../../components/tabs/style.css">-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="as_page_anmeldung">
-        <as-tabs v-bind:tabs="as_tabs" :hidden="false">
             <as-textfield label="Benutzername" v-model="user"></as-textfield>
             <as-textfield label="Passwort" v-model="passwort"></as-textfield>
-            <as-button-bar href="javascript:;" :link="false" label="Anmelden"></as-button-bar>
-        </as-tabs>
-        dsads
+            <as-button-bar class="asl_buttonBar_recht" href="javascript:;" :link="false" label="Anmelden"></as-button-bar>
+            <as-button-bar href="javascript:;" :link="true" label="Registrieren"></as-button-bar>
     </div>
 
 
@@ -24,7 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
     <script src="../../components/textfield/component.js"></script>
     <script src="../../components/buttonBar/component.js"></script>
-    <script src="../../components/tabs/component.js"></script>
+<!--    <script src="../../components/tabs/component.js"></script>-->
     <script src="scoped-javascript.js"></script>
 </body>
 </html>

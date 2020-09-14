@@ -3,3 +3,23 @@
     width: 80%;
     margin: 50px auto;
 }
+.as_tabs > .as_tabBar
+{
+    text-align: center;
+    margin-bottom: 28px;
+}
+.as_tabs > .as_tabBar > .as_tab
+{
+    display: inline;
+    margin: 0 12px;
+}
+.as_tabs > .as_tabBar a
+/*.as_tabs > .as_tabBar span*/
+{
+    text-decoration:none;
+    color: #166502;
+}
+.as_tabs > .as_tabBar a:hover
+{
+    text-decoration: underline;
+}
