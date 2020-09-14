@@ -1,0 +1,23 @@
+.as_buttonBar
+{
+    margin: 15px 0;
+}
+/*----------Style für Button-Bar-Links---------*/
+.as_buttonBar > .as_buttonBar_button
+{
+    background: #166502;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+.as_buttonBar > .as_buttonBar_button > a
+{
+    color: white;
+    text-decoration:none;
+}
+.as_buttonBar > .as_buttonBar_button > a:hover
+{
+    text-decoration: underline;
+}
+
+/*----------Style für Funktionslinks---------*/

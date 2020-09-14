@@ -13,9 +13,5 @@ Vue.component('as-textfield', {
                 '<input type="text" v-model="value.value" :maxlength="maxlength" :class="value.error!=\'\'?\'as_inputfield_error\':\'\'"/>' +
                 '<div v-if="value.error!=\'\'" class="as_textfield_error">{{value.error}}</div>' +
             '</div>' +
-        '</div>'+
-        '<style lang="scss">'+
-            '@import "component.scss";'+
-        '</style>'
-
+        '</div>'
 });
