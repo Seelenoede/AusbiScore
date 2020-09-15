@@ -6,19 +6,34 @@
     <link rel="stylesheet" href="../../components/textfield/style.css">
     <link rel="stylesheet" href="../../components/buttonBar/style.css">
     <link rel="stylesheet" href="../../components/tabs/style.css">
+    <link rel="stylesheet" href="../../components/block/style.css">
+    <link rel="stylesheet" href="../../components/blockElement/style.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <div id="as_page_wocheneintrag">
         <as-tabs v-bind:tabs="as_tabs" :hidden="false">
-            <div v-if="as_activeTabName == 'tab1'">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aut consectetur cum delectus deserunt ea,
-                est expedita fuga ipsa laboriosam laudantium maxime numquam perspiciatis quia rerum velit veniam voluptas.
-            </div>
-            <div v-if="as_activeTabName == 'tab2'">
-                pepepep ewjf whejc wieojdiew csijweojcoiwe
-            </div>
+            <as-block :line-padding="true">
+                <as-block-element v-if="eintraege.length>0" v-for="(eintrag, index) in eintraege">
+                    <div v-if="!eintrag.isBearbeitet">
+                        <div v-if="eintrag.besonderes.value">Besonderes: {{eintrag.besonderes.value}}</div>
+                        <div>{{eintrag.lernfeld.value}} ({{eintrag.stunden.value}}): {{eintrag.eintrag.value}}</div>
+                        <div class="as_block_editButtonBar">
+                            <a href="javascript:;" @click="editEintrag(index)"><img src="../image/eit_icon.svg" alt=""></a>
+                            <a href="javascript:;" @click="editEintrag(index)"><img src="../image/plus_icon.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div v-else>
+                        <as-textfield label="Besonderes" v-model="eintrag.besonderes"></as-textfield>
+                        <as-textfield label="Lernfeld" v-model="eintrag.lernfeld"></as-textfield>
+                        <as-textfield label="Stunden" v-model="eintrag.stunden"></as-textfield>
+                        <as-textfield label="Eintrag" v-model="eintrag.eintrag"></as-textfield>
+                        <as-button-bar class="asl_buttonBar_recht" :link="false" label="Speichern" @click="saveEintrag()"></as-button-bar>
+                    </div>
+                </as-block-element>
+            </as-block>
+
         </as-tabs>
 
 
@@ -32,6 +47,8 @@
     <script src="../../components/textfield/component.js"></script>
     <script src="../../components/buttonBar/component.js"></script>
     <script src="../../components/tabs/component.js"></script>
+    <script src="../../components/block/component.js"></script>
+    <script src="../../components/blockElement/component.js"></script>
     <script src="scoped-javascript.js"></script>
 </body>
 </html>

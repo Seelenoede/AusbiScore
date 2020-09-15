@@ -1,11 +1,15 @@
 Vue.component('as-textfield', {
     props:
-        {
-            label: String,
-            value: Object,
-            maxlength: String,
-            readonly: Boolean
-        },
+    {
+        label: String,
+        value: Object,
+        maxlength: String,
+        readonly: Boolean
+    },
+    data: function ()
+    {
+        return {}
+    },
     template: '' +
         '<div class="as_textfield">' +
             '<div>' +
