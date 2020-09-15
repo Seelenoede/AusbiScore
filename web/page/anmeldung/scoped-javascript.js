@@ -9,13 +9,18 @@ new Vue({
         user:{value:"", error:""},
         passwort:{value:"", error:""}
     },
+    mounted:function()
+    {
+    },
     computed:
     {
 
     },
-    method:
+    methods:
     {
-
+        anmelden:function () {
+            // hier wird die Verbindung mit dem Server hergestellt
+        }
     }
 
 });
