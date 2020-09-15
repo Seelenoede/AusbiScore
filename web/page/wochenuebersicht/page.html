@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Wochenübersicht</title>
+<!--    <link rel="stylesheet" href="../../components/textfield/style.css">-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../components/buttonBar/style.css">
+    <link rel="stylesheet" href="../../components/dropdown/style.css">
+    <link rel="stylesheet" href="../../components/textareafield/style.css">
+    <link rel="stylesheet" href="../../components/tabs/style.css">
+
+</head>
+<body>
+    <div id="as_page_wochenuebersicht">
+        <as-tabs v-bind:tabs="as_tabs" :hidden="false">
+            <h1>Wochenübersicht</h1>
+            <as-dropdown label="Monat" :options="auswahllisten.monat" v-model="monat"></as-dropdown>
+            <as-dropdown label="Jahr" :options="auswahllisten.jahr" v-model="jahr"></as-dropdown>
+<!--            <as-textareafield label="Eintrag" v-model="eintrag" rows="4" maxlength="500"></as-textareafield>-->
+            <as-button-bar href="javascript:;" :link="false" label="Filtern/Suchen"></as-button-bar>
+            <div class="as_container_wochen">
+                <div>
+                    <div>14.09. bis 20.09.2020 </div>
+                    <div></div>
+                    <div>
+                        <a href="../../page/wocheneintrag/page.html">Bearbeiten</a>
+                        <a href="javascript:;">Ansicht</a>
+                        <a href="javascript:;">Exportieren</a>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>+</div>
+            </div>
+        </as-tabs>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+    <script src="../../components/textfield/component.js"></script>
+    <script src="../../components/dropdown/component.js"></script>
+    <script src="../../components/textareafield/component.js"></script>
+    <script src="../../components/buttonBar/component.js"></script>
+    <script src="../../components/tabs/component.js"></script>
+    <script src="scoped-javascript.js"></script>
+</body>
+</html>
