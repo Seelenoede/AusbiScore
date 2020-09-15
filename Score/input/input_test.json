@@ -1,0 +1,7 @@
+[
+  {"Ziel" : { "wissen_anwenden": 10  , "etwas_gelernt": 10, "kommunikation": 10, "eigeninitiative": 10, "motivation": 10},
+  "Berichtsheft": {"puenktlich": "ja", "taeglich": "ja"}},
+
+  {"Ziel" : { "wissen_anwenden": 5  , "etwas_gelernt": 5, "kommunikation": 5, "eigeninitiative": 5, "motivation": 5},
+  "Berichtsheft": {"puenktlich": "nein", "taeglich": "nein"}}
+]
