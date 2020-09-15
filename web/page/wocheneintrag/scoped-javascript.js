@@ -17,7 +17,7 @@ new Vue({
     {
 
     },
-    method:
+    methods:
     {
 
     }

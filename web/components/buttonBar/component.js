@@ -16,11 +16,14 @@ Vue.component('as-button-bar', {
         },
     methods:
         {
+            as_click:function () {
+                return this.$emit('click');
+            }
         },
     template: '' +
         '<div class="as_buttonBar">' +
             '<div :class="myClass">' +
-                '<a class="as_buttonBar_label" :href="href">{{label}}</a>' +
+                '<a class="as_buttonBar_label" href="javascript:;" v-on:click="as_click">{{label}}</a>' +
             '</div>' +
         '</div>'
 });

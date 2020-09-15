@@ -6,10 +6,6 @@ Vue.component('as-tabs', {
             title: String,
             hidden: Boolean
         },
-    data: function ()
-        {
-            return { }
-        },
     computed:
         {
             visibleTabs:function()
@@ -59,7 +55,7 @@ Vue.component('as-tabs', {
             },
             as_tab_click:function (tab)
             {
-                if(this.as_activeTab!==tab) this.$emit('change',tab);
+                this.as_onChangeTabLoaded(tab);
             }
         },
     template: '' +
