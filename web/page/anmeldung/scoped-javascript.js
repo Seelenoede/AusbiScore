@@ -54,6 +54,18 @@ new Vue({
             };
             xhttp.open("GET", "../../../backend/Main.java", true);
             xhttp.send();
+        },
+        passwortAnzeigen:function()
+        {
+            let input= $("#as_page_anmeldung #asl_eye_passwort input");
+            if (input.attr("type") === "password")
+            {
+                input.attr("type", "text");
+            }
+            else
+            {
+                input.attr("type", "password");
+            }
         }
     }
 

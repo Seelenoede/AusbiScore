@@ -4,8 +4,9 @@
     border: 1px solid #166502;
     border-radius: 5px;
     width: 100%;
-    margin: 15px 0;
+    margin: 20px 0;
     position: relative;
+    color: grey;
 }
 .as_block.as_block_linePadding_true
 {

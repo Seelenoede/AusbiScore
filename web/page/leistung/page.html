@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leistung</title>
+    <link rel="stylesheet" href="../../components/textfield/style.css">
+    <link rel="stylesheet" href="../../components/buttonBar/style.css">
+    <link rel="stylesheet" href="../../components/tabs/style.css">
+    <link rel="stylesheet" href="../../components/dropdown/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="as_page_leistung">
+        <as-tabs v-bind:tabs="as_tabs" :hidden="false">
+            <h1>Leistungsbewertung</h1>
+            <as-dropdown label="Motivation" :options="auswahllisten.motivation" v-model="eingaben.motivation"></as-dropdown>
+            <as-dropdown label="Verständnis" :options="auswahllisten.verstaendnis" v-model="eingaben.verstaendnis"></as-dropdown>
+            <as-dropdown label="Verbessert" :options="auswahllisten.verbessert" v-model="eingaben.verbessert"></as-dropdown>
+            <as-dropdown label="Eigeninitiative" :options="auswahllisten.eigeninitiative" v-model="eingaben.eigeninitiative"></as-dropdown>
+
+            <as-button-bar :link="false" label="Speichern" @click="speichern()"></as-button-bar>
+        </as-tabs>
+    </div>
+
+    <script src="../../components/textfield/component.js"></script>
+    <script src="../../components/buttonBar/component.js"></script>
+    <script src="../../components/tabs/component.js"></script>
+    <script src="../../components/dropdown/component.js"></script>
+    <script src="scoped-javascript.js"></script>
+</body>
+</html>

@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="../../components/tabs/style.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="as_page_anmeldung">
             <as-textfield label="Benutzername" v-model="user"></as-textfield>
-            <as-textfield label="Passwort" v-model="passwort"></as-textfield>
+            <div id="asl_eye_passwort">
+                <img src="../../medien/eye_icon.svg" alt="" @click="passwortAnzeigen()">
+                <as-textfield label="Passwort" type="password" v-model="passwort"></as-textfield>
+            </div>
+
             <as-button-bar class="asl_buttonBar_recht" :link="false" label="Anmelden" @click="anmelden()"></as-button-bar>
             <as-button-bar :link="true" label="Registrieren" @click="registrieren()"></as-button-bar>
     </div>

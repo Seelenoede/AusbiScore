@@ -3,6 +3,7 @@
     width: 18px;
     margin-left: 10px;
     cursor: pointer;
+    max-height: 20px;
 }
 #as_page_wocheneintrag .as_block_editButtonBar
 {
@@ -17,4 +18,43 @@
 #as_page_wocheneintrag .asl_buttonBar_recht
 {
     float: right;
+    text-align: right;
+}
+
+#as_page_wocheneintrag .asl_block_eintragBearbeiten > div:nth-child(1)
+{
+    grid-area: besonderes;
+}
+#as_page_wocheneintrag .asl_block_eintragBearbeiten > div:nth-child(2)
+{
+    grid-area: lernfeld;
+}
+#as_page_wocheneintrag .asl_block_eintragBearbeiten > div:nth-child(3)
+{
+    grid-area: stunden;
+}
+#as_page_wocheneintrag .asl_block_eintragBearbeiten >  div:nth-child(4)
+{
+    grid-area: eintrag;
+}
+#as_page_wocheneintrag .asl_block_eintragBearbeiten >  div:nth-child(5)
+{
+    grid-area: abbrechen;
+}
+#as_page_wocheneintrag .asl_block_eintragBearbeiten
+{
+    display: grid;
+    grid-template-areas: 'besonderes besonderes' 'lernfeld stunden' 'eintrag eintrag' 'abbrechen abbrechen';
+}
+#as_page_wocheneintrag .asl_block_eintragBearbeiten > div
+{
+    margin: 6px;
+}
+#as_page_wocheneintrag .asl_numberfield
+{
+    width: 200px;
+}
+.asl_space
+{
+    height: 20px;
 }

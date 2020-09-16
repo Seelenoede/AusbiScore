@@ -1,8 +1,7 @@
 Vue.component('as-button-bar', {
     props:
         {
-            href: String,
-            // click: String,
+            href: {type:String, default:"javascript:;"},
             link: Boolean,
             label: String
         },
@@ -23,7 +22,7 @@ Vue.component('as-button-bar', {
     template: '' +
         '<div class="as_buttonBar">' +
             '<div :class="myClass">' +
-                '<a class="as_buttonBar_label" href="javascript:;" v-on:click="as_click">{{label}}</a>' +
+                '<a class="as_buttonBar_label" :href="href" v-on:click="as_click">{{label}}</a>' +
             '</div>' +
         '</div>'
 });

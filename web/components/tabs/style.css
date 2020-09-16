@@ -1,17 +1,45 @@
 .as_tabs
 {
-    width: 80%;
+    max-width: 900px;
     margin: 50px auto;
 }
 .as_tabs > .as_tabBar
 {
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-column-gap: 2px;
 }
 .as_tabs > .as_tabBar > .as_tab
 {
     display: inline;
-    margin: 0 12px;
+    padding: 10px 0;
+    background-color: #c1e3b7;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 2px 0;
+    font-size: 17px;
+    position: relative;
+}
+.as_tabs > .as_tabBar > .as_tab > div.as_tab_hinweis
+{
+    position: absolute;
+    top:50px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 17px;
+    color: grey;
+}
+.as_tabs > .as_tabBar > .as_tab.as_active
+{
+    background-color: #166502;
+    margin: 0;
+    font-size: 20px;
+}
+.as_tabs > .as_tabBar > .as_tab.as_active a
+{
+    color: #ffffff;
 }
 .as_tabs > .as_tabBar a
 /*.as_tabs > .as_tabBar span*/
