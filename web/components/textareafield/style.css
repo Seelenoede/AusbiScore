@@ -12,6 +12,7 @@
         border-radius: 5px;
         border: 1px solid #166502;
         box-sizing: border-box;
+        outline: none;
     }
 .as_textareafield > div div.as_textareafield_label
     {

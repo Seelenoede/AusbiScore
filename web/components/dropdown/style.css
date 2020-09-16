@@ -10,7 +10,8 @@
         margin-top: 10px;
         border-radius: 5px;
         border:1px solid #166502;
-}
+        outline: none;
+    }
 .as_dropdown > div div.as_dropdown_label
     {
         margin-left: 10px;
