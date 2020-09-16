@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Anmeldung</title>
+    <link rel="stylesheet" href="{% static 'components/textfield/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/buttonBar/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/tabs/style.css' %}">
+    <link rel="stylesheet" href="{% static 'page/anmeldung/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="as_page_anmeldung">
+            <as-textfield label="Benutzername" v-model="user"></as-textfield>
+            <as-textfield label="Passwort" v-model="passwort"></as-textfield>
+            <as-button-bar class="asl_buttonBar_recht" :link="false" label="Anmelden" @click="anmelden()"></as-button-bar>
+            <as-button-bar :link="true" label="Registrieren" @click="registrieren()"></as-button-bar>
+    </div>
+
+    <script src={%static "components/textfield/component.js" %}></script>
+    <script src={%static "components/buttonBar/component.js" %}></script>
+    <script src={%static "components/tabs/component.js" %}></script>
+    <script src={%static "page/anmeldung/scoped-javascript.js" %}></script>
+</body>
+</html>
