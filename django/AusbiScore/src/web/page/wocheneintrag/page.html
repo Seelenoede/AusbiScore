@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wocheneintrag</title>
+    <link rel="stylesheet" href="../../components/textfield/style.css">
+    <link rel="stylesheet" href="../../components/buttonBar/style.css">
+    <link rel="stylesheet" href="../../components/tabs/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="as_page_wocheneintrag">
+        <as-tabs v-bind:tabs="as_tabs" :hidden="false">
+            <div v-if="as_activeTabName == 'tab1'">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aut consectetur cum delectus deserunt ea,
+                est expedita fuga ipsa laboriosam laudantium maxime numquam perspiciatis quia rerum velit veniam voluptas.
+            </div>
+            <div v-if="as_activeTabName == 'tab2'">
+                pepepep ewjf whejc wieojdiew csijweojcoiwe
+            </div>
+        </as-tabs>
+
+
+    </div>
+
+
+
+
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>-->
+<!--    <script src="../../vue.js"></script>-->
+    <script src="../../components/textfield/component.js"></script>
+    <script src="../../components/buttonBar/component.js"></script>
+    <script src="../../components/tabs/component.js"></script>
+    <script src="scoped-javascript.js"></script>
+</body>
+</html>

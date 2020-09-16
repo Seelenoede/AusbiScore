@@ -1,0 +1,36 @@
+.as_buttonBar
+{
+    margin: 15px 0;
+}
+.as_buttonBar a
+{
+    cursor: pointer;
+}
+/*----------Style für Button-Bar-Links---------*/
+.as_buttonBar > .as_buttonBar_button
+{
+    background: #166502;
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+.as_buttonBar > .as_buttonBar_button > a
+{
+    color: #ffffff;
+    text-decoration:none;
+}
+.as_buttonBar > .as_buttonBar_button > a:hover
+{
+    text-decoration: underline;
+}
+
+/*----------Style für Funktionslinks---------*/
+
+.as_buttonBar > .as_buttonBar_link
+{
+    padding: 11px 0;
+}
+.as_buttonBar > .as_buttonBar_link > a
+{
+    color: #166502;
+}
