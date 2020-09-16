@@ -14,27 +14,26 @@
 <body>
     <div id="as_page_wochenuebersicht" v-cloak>
         <as-tabs v-bind:tabs="as_tabs" :hidden="false">
-            <h1>Wochenübersicht </h1>
-            <as-dropdown label="Monat" :options="auswahllisten.monat" v-model="eingaben.monat"></as-dropdown>
-            <as-dropdown label="Jahr" :options="auswahllisten.jahr" v-model="eingaben.jahr"></as-dropdown>
-<!--            <as-textareafield label="Eintrag" v-model="eintrag" rows="4" maxlength="500"></as-textareafield>-->
-            <as-button-bar href="javascript:;" :link="false" label="Suchen" @click="sucheWochen()"></as-button-bar>
-            <div v-if="listWochen.length > 0 " class="as_container_wochen">
-                <div href="../../page/wocheneintrag/page.html">+</div>
-                <div v-for="week in listWochen">
+            <h1>Wochenübersicht</h1>
+            <div class="as_suchfelder">
+                <as-dropdown label="Monat" :options="auswahllisten.monat" v-model="eingaben.monat"></as-dropdown>
+                <as-dropdown label="Jahr" :options="auswahllisten.jahr" v-model="eingaben.jahr"></as-dropdown>
+            </div>
+            <as-button-bar href="javascript:;" :link="false" label="Suchen" @click="sucheTage()"></as-button-bar>
+            <div class="as_noitem" v-if="!listTage.length > 0">
+                <span >Es sind keine Einträge vorhanden.</span>
+            </div>
+            <div class="as_container_wochen">
+                <div><a href="../../page/wocheneintrag/page.html">+</a></div>
+                <div v-if="listTage.length > 0 " v-for="week in listWochen">
                     <div>{{week.wochenstart}} bis {{week.wochenende}}</div>
                     <div><div v-if="week.istVollstaendig === '1'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">vollständig</li></div><div v-else="week.istVollstaendig === '0'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">offene Einträge</li></div></div>
                     <div>
                         <a href="../../page/wocheneintrag/page.html"><img src="../../medien/edit_icon_black_noLine.svg"/>Bearbeiten</a>
-                        <a href="javascript:;" @click="goToAlert()"><img src="../../medien/ansicht_icon_black.svg"/>Einsehen</a>
+                        <a href="javascript:;" @click="getWeek();"><img src="../../medien/ansicht_icon_black.svg"/>Einsehen</a>
                         <a href="javascript:;" target="_blank"><img src="../../medien/export_icon_black.svg"/>Exportieren</a>
                     </div>
                 </div>
-
-
-            </div>
-            <div v-else-if="!listWochen.length > 0">
-                Für diese Angaben sind keine Einträge vorhanden.
             </div>
         </as-tabs>
 

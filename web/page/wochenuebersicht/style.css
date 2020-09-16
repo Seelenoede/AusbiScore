@@ -2,6 +2,16 @@ h1
 {
     color: #166502;
 }
+div.as_noitem
+{
+    margin: 15px 0 15px 0;
+}
+div.as_suchfelder
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+}
 div.as_container_wochen
 {
     display: grid;
@@ -22,7 +32,7 @@ div.as_container_wochen > div
     border-radius: 5px;
     color: #166502;
 }
-div.as_container_wochen > div:first-child
+div.as_container_wochen > div:first-child > a
 {
     font-size: 175px;
     font-weight: bold;
@@ -30,6 +40,7 @@ div.as_container_wochen > div:first-child
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
 }
 div.as_container_wochen > div > div
 {
