@@ -1,0 +1,20 @@
+#as_page_wocheneintrag .as_block_editButtonBar img
+{
+    width: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#as_page_wocheneintrag .as_block_editButtonBar
+{
+    position: absolute;
+    right: 0;
+    top: 18%;
+}
+#as_page_wocheneintrag .as_blockElement
+{
+    clear: both;
+}
+#as_page_wocheneintrag .asl_buttonBar_recht
+{
+    float: right;
+}
