@@ -4,9 +4,24 @@ import os
 possible_fields_ziel = ["wissen_anwenden", "etwas_gelernt", "kommunikation", "eigeninitiative", "motivation"]
 possible_fields_berichtsheft = ["puenktlich", "taeglich"]
 
-# json_file = open("fields.json")
-# valid_fields = json.load(json_file)
+# wissen_anwenden = ""
+# etwas_gelernt = ""
+# kommunikation = ""
+# eigeninitiative =  ""
+# motivation = ""
+
+
 input_dir = os.listdir("input")
+
+# def get_score_ziel():
+#     TODO
+
+# def get_score_berichtshet():
+#     TODO
+#
+# def get_score_total():
+#     TODO
+
 
 for file_name in input_dir:
     with open ('input/' + file_name, 'r') as json_file:
