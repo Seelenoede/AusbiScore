@@ -6,15 +6,16 @@ new Vue({
         [
             {active:true, visible:false, disabled:false, loaded:false, errorText:"", name:"tab1", label:"Wochenübersicht"}
         ],
+        //todo:aus der DB holen
+        score:"",
         eingaben:
             {
                 monat:{value:"", error:""},
                 jahr:{value:"", error:""}
             },
-        //todo: eintrag entfernen sobald nicht mehr benötigt
-        eintrag:{value:"", error:""},
         auswahllisten:
             {
+                //todo: aus der Datenbank holen
                 monat:[
                     {code:"01", decode:"Januar"},
                     {code:"02", decode:"Februar"},
@@ -29,6 +30,7 @@ new Vue({
                     {code:"11", decode:"November"},
                     {code:"12", decode:"Dezember"}
                     ],
+                //todo: aus der DB?
                 jahr:[
                     {code:"2016", decode:"2016"},
                     {code:"2017", decode:"2017"},
@@ -38,18 +40,30 @@ new Vue({
                     {code:"2021", decode:"2021"}
                     ]
             },
+        //todo: aus der Datenbank holen
             listWochen:
                 [
-                    {wochenId:"1", wochenstart:"14.09.2020", wochenende:"20.09.2020", wochenstatuscode:"10", wochenstatusdecode:"vollständig"},
-                    {wochenId:"2", wochenstart:"21.09.2020", wochenende:"27.09.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"},
-                    {wochenId:"3", wochenstart:"28.09.2020", wochenende:"04.10.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"},
-                    {wochenId:"4", wochenstart:"05.10.2020", wochenende:"11.10.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"},
-                    {wochenId:"5", wochenstart:"12.10.2020", wochenende:"18.10.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"},
-                    {wochenId:"6", wochenstart:"19.10.2020", wochenende:"26.10.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"},
-                    {wochenId:"7", wochenstart:"27.10.2020", wochenende:"01.11.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"},
-                    {wochenId:"8", wochenstart:"02.11.2020", wochenende:"08.11.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"},
-                    {wochenId:"9", wochenstart:"09.11.2020", wochenende:"15.11.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"},
-                    {wochenId:"10", wochenstart:"16.11.2020", wochenende:"22.11.2020", wochenstatuscode:"20", wochenstatusdecode:"offene Einträge"}
+                    {tagId:"1", datum:"14.09.2020", istVollstaendig: "1"},
+                    {tagId:"2", datum:"15.09.2020", istVollstaendig: "0"},
+                    {tagId:"3", datum:"16.09.2020", istVollstaendig: "1"},
+                    {tagId:"4", datum:"17.09.2020", istVollstaendig: "0"},
+                    {tagId:"5", datum:"18.09.2020", istVollstaendig: "1"},
+                    {tagId:"6", datum:"19.09.2020", istVollstaendig: "1"},
+                    {tagId:"7", datum:"20.09.2020", istVollstaendig: "0"},
+                    {tagId:"8", datum:"21.09.2020", istVollstaendig: "0"},
+                    {tagId:"9", datum:"22.09.2020", istVollstaendig: "0"},
+                    {tagId:"10", datum:"31.09.2020", istVollstaendig: "1"},
+                    {tagId:"11", datum:"24.09.2020", istVollstaendig: "1"},
+                    {tagId:"12", datum:"25.09.2020", istVollstaendig: "1"},
+                    {tagId:"13", datum:"26.09.2020", istVollstaendig: "1"},
+                    {tagId:"14", datum:"27.09.2020", istVollstaendig: "1"},
+                    {tagId:"15", datum:"28.09.2020", istVollstaendig: "1"},
+                    {tagId:"16", datum:"29.09.2020", istVollstaendig: "1"},
+                    {tagId:"17", datum:"30.09.2020", istVollstaendig: "1"},
+                    {tagId:"18", datum:"01.10.2020", istVollstaendig: "1"},
+                    {tagId:"19", datum:"02.10.2020", istVollstaendig: "1"},
+                    {tagId:"20", datum:"03.10.2020", istVollstaendig: "1"},
+                    {tagId:"21", datum:"04.10.2020", istVollstaendig: "1"}
                 ]
     },
     computed:
@@ -58,6 +72,10 @@ new Vue({
     },
     methods:
     {
+        getWeek:function()
+        {
+
+        },
         currentDate:function()
         {
             let me = this;
@@ -65,6 +83,17 @@ new Vue({
             let month = "" + (heute.getMonth() + 1);
             let day = "" + heute.getDate();
             let year = "" + heute.getFullYear();
+            let wochentag = "" + heute.getDay();
+
+            if(wochentag === "3")
+            {
+                console.log("-");
+                console.log("-");
+                console.log("Es ist Mittwoch!!!!");
+                console.log("-");
+                console.log("-");
+            }
+
 
             if (month.length < 2) month = "0" + month;
             if (day.length < 2) day = "0" + day;
@@ -84,11 +113,11 @@ new Vue({
             {
                 for(let i = me.listWochen.length-1; i >= 0; i--)
                 {
-                    // let zahlMonat = me.listWochen[i].wochenstart.substring(me.listWochen[i].wochenstart.indexOf('.'),4);
-                    let stringTag = me.listWochen[i].wochenstart.substring(0,2);
-                    let stringMonat = me.listWochen[i].wochenstart.substring(3,5);
-                    let stringJahr = me.listWochen[i].wochenstart.substring(6,10);
-                    console.log(me.listWochen[i].wochenstart);
+                    // let zahlMonat = me.listWochen[i].datum.substring(me.listWochen[i].datum.indexOf('.'),4);
+                    let stringTag = me.listWochen[i].datum.substring(0,2);
+                    let stringMonat = me.listWochen[i].datum.substring(3,5);
+                    let stringJahr = me.listWochen[i].datum.substring(6,10);
+                    console.log(me.listWochen[i].datum);
                     console.log(stringTag);
                     console.log(stringMonat);
                     console.log(stringJahr);

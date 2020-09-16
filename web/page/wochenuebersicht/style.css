@@ -1,7 +1,6 @@
-
 h1
 {
-
+    color: #166502;
 }
 div.as_container_wochen
 {
@@ -19,37 +18,41 @@ div.as_container_wochen > div
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 
-    background: rgb(193, 227, 183);
+    background: #c1e3b7;
+    border-radius: 5px;
+    color: #166502;
 }
 div.as_container_wochen > div:first-child
 {
     font-size: 175px;
     font-weight: bold;
-    color: #7eab73;
+    color: #166502;
     text-align: center;
     cursor: pointer;
+    border-radius: 5px;
 }
 div.as_container_wochen > div > div
 {
     font-size: 20px;
     font-weight: bold;
-    color: #ffffff;
+    color: #166502;
     text-align: center;
     padding: 0.5em;
 }
-div.as_container_wochen > div > div > li.as_incomplete::marker
+div.as_container_wochen > div > div > div > li.as_incomplete::marker
 {
     color: red
 }
 div.as_container_wochen > div > div:first-child
 {
-    background: #7eab73;
+    background: #166502;
+    color:#ffffff;
 }
 div.as_container_wochen > div > div > a
 {
     font-size: 16px;
     /*font-weight: bold;*/
-    color: #ffffff;
+    color: #166502;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -57,7 +60,7 @@ div.as_container_wochen > div > div > a
 }
 div.as_container_wochen > div > div > a > img
 {
-    height: 15px;
+    height: 12px;
     margin-right: 5px;
 }
 div.as_container_wochen > div > div > a:hover
