@@ -1,0 +1,9 @@
+.as_banner
+{
+    max-width: 900px;
+    margin: 20px auto;
+}
+.as_banner img
+{
+    width: 170px;
+}

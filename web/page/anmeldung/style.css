@@ -3,6 +3,15 @@
     width: 300px;
     margin: 50px auto;
 }
+#as_page_anmeldung .asl_logo
+{
+    text-align: center;
+}
+#as_page_anmeldung .asl_logo img
+{
+    width: 200px;
+    margin: 50px 0;
+}
 #as_page_anmeldung .asl_buttonBar_recht
 {
     float: right;

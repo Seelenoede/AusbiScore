@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="../../components/textfield/style.css">
     <link rel="stylesheet" href="../../components/buttonBar/style.css">
     <link rel="stylesheet" href="../../components/tabs/style.css">
+    <link rel="stylesheet" href="../../components/banner/style.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="as_page_anmeldung">
+        <div class="asl_logo">
+            <img src="../../medien/logo.svg" alt="">
+        </div>
             <as-textfield label="Benutzername" v-model="user"></as-textfield>
             <div id="asl_eye_passwort">
                 <img src="../../medien/eye_icon.svg" alt="" @click="passwortAnzeigen()">
@@ -19,12 +23,13 @@
             </div>
 
             <as-button-bar class="asl_buttonBar_recht" :link="false" label="Anmelden" @click="anmelden()"></as-button-bar>
-            <as-button-bar :link="true" label="Registrieren" @click="registrieren()"></as-button-bar>
+            <as-button-bar href="../../page/register/page.html"  :link="true" label="Registrieren"></as-button-bar>
     </div>
 
     <script src="../../components/textfield/component.js"></script>
     <script src="../../components/buttonBar/component.js"></script>
     <script src="../../components/tabs/component.js"></script>
+    <script src="../../components/banner/component.js"></script>
     <script src="scoped-javascript.js"></script>
 </body>
 </html>

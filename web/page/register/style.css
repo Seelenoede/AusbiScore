@@ -1,0 +1,33 @@
+
+#as_page_register
+{
+    max-width: 500px;
+    margin: 0 auto;
+}
+#as_page_register h1
+{
+    color: #166502;
+}
+#as_page_register #asl_eye_passwort
+{
+    position: relative;
+}
+#as_page_register #asl_eye_passwort > img
+{
+    width: 18px;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    z-index: 10;
+    cursor:pointer;
+}
+#as_page_register .asl_buttonBar_recht
+{
+    float: right;
+    text-align: right;
+}
+#as_page_register .as_buttonBar_button
+{
+    width: auto;
+    text-align: center;
+}

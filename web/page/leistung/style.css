@@ -2,3 +2,12 @@
 {
     color: #166502;
 }
+#as_page_leistung .as_leistung_banner
+{
+    max-width: 900px;
+    margin: 20px auto;
+}
+#as_page_leistung .as_leistung_banner img
+{
+    width: 170px;
+}

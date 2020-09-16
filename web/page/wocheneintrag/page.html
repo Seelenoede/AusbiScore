@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="../../components/block/style.css">
     <link rel="stylesheet" href="../../components/blockElement/style.css">
     <link rel="stylesheet" href="../../components/textareafield/style.css">
+    <link rel="stylesheet" href="../../components/banner/style.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <div id="as_page_wocheneintrag">
-
+        <as-banner></as-banner>
         <as-tabs v-bind:tabs="as_tabs" :hidden="false">
 <!--            <div>-->
 <!--                <as-textfield label="Datum" v-model="datum"></as-textfield>-->
@@ -69,6 +70,7 @@
     <script src="../../components/tabs/component.js"></script>
     <script src="../../components/block/component.js"></script>
     <script src="../../components/blockElement/component.js"></script>
+    <script src="../../components/banner/component.js"></script>
     <script src="scoped-javascript.js"></script>
 </body>
 </html>
