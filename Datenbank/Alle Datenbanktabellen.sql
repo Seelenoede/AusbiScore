@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 16. Sep 2020 um 11:27
+-- Erstellungszeit: 17. Sep 2020 um 08:30
 -- Server-Version: 10.1.36-MariaDB
 -- PHP-Version: 7.2.11
 
@@ -39,7 +39,7 @@ CREATE TABLE `anmeldung` (
   `Ausbildungsberuf` char(50) NOT NULL,
   `Ausbilder` char(50) NOT NULL,
   `Ausbildungszeitraum` char(100) NOT NULL,
-  `ausbildende Abteilung` char(50) NOT NULL,
+  `ausbildende_Abteilung` char(50) NOT NULL,
   `UserName` char(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -47,7 +47,7 @@ CREATE TABLE `anmeldung` (
 -- Daten für Tabelle `anmeldung`
 --
 
-INSERT INTO `anmeldung` (`UserID`, `Passwort`, `Vorname`, `Nachname`, `Geburtstag`, `Adresse`, `Ausbildungsstätte`, `Ausbildungsberuf`, `Ausbilder`, `Ausbildungszeitraum`, `ausbildende Abteilung`, `UserName`) VALUES
+INSERT INTO `anmeldung` (`UserID`, `Passwort`, `Vorname`, `Nachname`, `Geburtstag`, `Adresse`, `Ausbildungsstätte`, `Ausbildungsberuf`, `Ausbilder`, `Ausbildungszeitraum`, `ausbildende_Abteilung`, `UserName`) VALUES
 (1, 'd404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db', 'Test', 'User', '2001-01-01', '', '', '0', '0', '0', '0', 'Testuser'),
 (2, '887375daec62a9f02d32a63c9e14c7641a9a8a42e4fa8f6590eb928d9744b57bb5057a1d227e4d40ef911ac030590bbce2bfdb78103ff0b79094cee8425601f5', 'Admin', 'Admin', '9999-12-12', '', '', '0', '0', '0', '0', 'Admin'),
 (3, '5adc61050db3e1f9e2935d88e5739ac218da4a53ef65fb398e303df7686a2ef425a676d69ff7f1a090e537e79df328214dfee2c885ece7c71f41f0f847d39ecd', 'Alexander', 'Haak', '0000-00-00', '', '', '0', '0', '0', '0', 'AlexH'),
@@ -68,10 +68,10 @@ CREATE TABLE `bericht` (
   `Besonderes` char(200) NOT NULL,
   `Lernfeld` char(200) NOT NULL,
   `Stunden` char(100) NOT NULL,
-  `GesamteStunden` int(5) NOT NULL,
+  `Gesamte_Stunden` int(5) NOT NULL,
   `Eintrag` char(200) NOT NULL,
   `Tag` char(20) NOT NULL,
-  `IstVollständig` tinyint(1) NOT NULL
+  `Ist_Vollständig` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -97,12 +97,12 @@ CREATE TABLE `punktesystem` (
 --
 
 CREATE TABLE `score` (
-  `ZielScore` int(5) NOT NULL,
+  `Zielscore` int(5) NOT NULL,
   `Berichtsscore` int(5) NOT NULL,
   `Gesamtscore` int(5) NOT NULL,
   `Maxscore` int(5) NOT NULL,
-  `ScoredPercent` int(5) NOT NULL,
-  `MaxPercent` int(5) NOT NULL,
+  `Scored_Percent` int(5) NOT NULL,
+  `Max_Percent` int(5) NOT NULL,
   `HighScore` int(5) NOT NULL,
   `BestScore` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -120,7 +120,7 @@ CREATE TABLE `scoreboard` (
   `Highscore` int(5) NOT NULL,
   `Platz` int(5) NOT NULL,
   `Datum` date NOT NULL,
-  `WeeklyScore` int(5) NOT NULL
+  `Weekly_Score` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -144,7 +144,7 @@ ALTER TABLE `bericht`
 -- Indizes für die Tabelle `scoreboard`
 --
 ALTER TABLE `scoreboard`
-  ADD PRIMARY KEY (`WeeklyScore`),
+  ADD PRIMARY KEY (`Weekly_Score`),
   ADD UNIQUE KEY `UserID` (`UserID`),
   ADD UNIQUE KEY `Datum` (`Datum`);
 COMMIT;
