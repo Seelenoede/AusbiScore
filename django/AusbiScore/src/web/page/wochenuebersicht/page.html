@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>Wochenübersicht</title>
 <!--    <link rel="stylesheet" href="../../components/textfield/style.css">-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../../components/buttonBar/style.css">
-    <link rel="stylesheet" href="../../components/dropdown/style.css">
-    <link rel="stylesheet" href="../../components/textareafield/style.css">
-    <link rel="stylesheet" href="../../components/tabs/style.css">
+    <link rel="stylesheet" href="{% static 'page/wochenuebersicht/style.css'%}">
+    <link rel="stylesheet" href="{% static 'components/buttonBar/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/dropdown/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/textareafield/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/tabs/style.css' %}">
 
 </head>
 <body>
@@ -44,11 +45,11 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
-    <script src="../../components/textfield/component.js"></script>
-    <script src="../../components/dropdown/component.js"></script>
-    <script src="../../components/textareafield/component.js"></script>
-    <script src="../../components/buttonBar/component.js"></script>
-    <script src="../../components/tabs/component.js"></script>
-    <script src="scoped-javascript.js"></script>
+    <script src={%static "components/textfield/component.js" %}></script>"
+    <script src={%static "components/dropdown/component.js" %}></script>
+    <script src={%static "components/textareafield/component.js" %}></script>
+    <script src={%static "components/buttonBar/component.js" %}></script>
+    <script src={%static "components/tabs/component.js" %}></script>
+    <script src={%static "page/wochenuebersicht/scoped-javascript.js" %}></script>
 </body>
 </html>
