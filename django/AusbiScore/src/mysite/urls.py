@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from anmeldung.views import anmelde_view
+from wochenuebersicht.views import uebersicht_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
