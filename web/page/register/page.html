@@ -17,12 +17,19 @@
     <div id="as_page_register">
         <as-banner></as-banner>
         <as-tabs v-bind:tabs="as_tabs" :hidden="false">
-            <h1>Ich bin neue hier...</h1>
+            <h1>Ich bin neu hier...</h1>
             <as-block :line-padding="true">
                 <as-textfield label="Vorname" v-model="benutzer.vorname"></as-textfield>
                 <as-textfield label="Name" v-model="benutzer.name"></as-textfield>
+                <as-textfield label="Adresse" v-model="benutzer.adresse"></as-textfield>
+
+            </as-block>
+
+            <as-block :line-padding="true">
                 <as-textfield label="Klasse" v-model="benutzer.klasse"></as-textfield>
-                <as-textfield label="Unternehmen" v-model="benutzer.unternehmen"></as-textfield>
+                <as-textfield label="Ausbildungsstätte" v-model="benutzer.ausbildungsstaette"></as-textfield>
+                <as-textfield label="Ausbildungsberuf" v-model="benutzer.ausbildungsberuf"></as-textfield>
+                <as-textfield label="Ausbilder" v-model="benutzer.ausbilder"></as-textfield>
             </as-block>
 
             <as-block :line-padding="true">
@@ -36,7 +43,7 @@
 
 
 
-            <as-button-bar :link="false" label="Speichern" @click="speichern()"></as-button-bar>
+            <as-button-bar :link="false" label="Registrieren" @click="speichern()"></as-button-bar>
         </as-tabs>
     </div>
 

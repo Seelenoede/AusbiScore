@@ -10,8 +10,11 @@ new Vue({
         {
             name:{value:"", error:""},
             vorname:{value:"", error:""},
+            adresse:{value:"", error:""},
             klasse:{value:"", error:""},
-            unternehmen:{value:"", error:""},
+            ausbildungsstaette:{value:"", error:""},
+            ausbildungsberuf:{value:"", error:""},
+            ausbilder:{value:"", error:""},
             userName:{value:"", error:""},
             passwort:{value:"", error:""},
         }
