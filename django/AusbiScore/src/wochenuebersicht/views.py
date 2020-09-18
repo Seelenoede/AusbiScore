@@ -5,17 +5,16 @@ from json import dumps
 # Create your views here.
 
 def uebersicht_view(request):
+	return render(request, 'page/wochenuebersicht/page.html', {})
 
+
+def show_wochenuebersicht(request):
 	cur = connection.cursor()
-	cur.execute('SELECT * FROM bericht')
+	cur.execute('SELECT `Datum` FROM bericht')
 	data = cur.fetchall()
-	print(data)
-	print(type(data))
+	# print(data)
+	# print(type(data))
 
-	# return render(request, 'page/wochenuebersicht/page.html', {})
 	dataJSON = dumps(data)
+	print(dataJSON)
 	return render(request, 'page/wochenuebersicht/page.html', {'data': dataJSON})
-
-
-
-
