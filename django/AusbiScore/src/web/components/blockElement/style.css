@@ -1,0 +1,19 @@
+.as_blockElement
+{
+    border-top: 1px solid #166502;
+    margin: 0 11px;
+    position: relative;
+}
+.as_blockElement > div
+{
+    position: relative;
+}
+.as_blockElement:not(:first-child)
+{
+    margin-top: 12px;
+    padding-top: 12px;
+}
+.as_blockElement:first-child
+{
+    border: none;
+}

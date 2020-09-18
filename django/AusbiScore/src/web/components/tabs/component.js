@@ -66,6 +66,7 @@ Vue.component('as-tabs', {
                         '{{tab.label}}' +
                     '</a>' +
                     '<span v-else>{{tab.label}}</span>' +
+                    '<div class="as_tab_hinweis" v-if="tab.active">{{tab.hinweistext}}</div>' +
                 '</div>' +
             '</div>' +
             '<div class="as_tabContent">' +

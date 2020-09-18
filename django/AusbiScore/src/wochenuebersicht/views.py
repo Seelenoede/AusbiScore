@@ -4,4 +4,5 @@ from django.shortcuts import render
 
 def uebersicht_view(request):
 	# Get wocheneinträge from database
-	return (request, 'page/wochenuebersicht/page.html', {})
+	print("Test")
+	return render(request, 'page/wochenuebersicht/page.html', {})

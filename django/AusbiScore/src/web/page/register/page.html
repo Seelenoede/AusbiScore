@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Registrierung</title>
+    <link rel="stylesheet" href="{% static 'components/textfield/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/buttonBar/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/tabs/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/dropdown/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/banner/style.css' %}">
+    <link rel="stylesheet" href="{% static 'components/block/style.css' %}">
+    <link rel="stylesheet" href="{% static 'page/register/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="as_page_register">
+        <as-banner></as-banner>
+        <as-tabs v-bind:tabs="as_tabs" :hidden="false">
+            <h1>Ich bin neu hier...</h1>
+            <as-block :line-padding="true">
+                <as-textfield label="Vorname" v-model="benutzer.vorname"></as-textfield>
+                <as-textfield label="Name" v-model="benutzer.name"></as-textfield>
+                <as-textfield label="Adresse" v-model="benutzer.adresse"></as-textfield>
+
+            </as-block>
+
+            <as-block :line-padding="true">
+                <as-textfield label="Klasse" v-model="benutzer.klasse"></as-textfield>
+                <as-textfield label="Ausbildungsstätte" v-model="benutzer.ausbildungsstaette"></as-textfield>
+                <as-textfield label="Ausbildungsberuf" v-model="benutzer.ausbildungsberuf"></as-textfield>
+                <as-textfield label="Ausbilder" v-model="benutzer.ausbilder"></as-textfield>
+            </as-block>
+
+            <as-block :line-padding="true">
+                <as-textfield label="Benutzername" v-model="benutzer.userName"></as-textfield>
+                <div id="asl_eye_passwort">
+                    <img src="{% static 'medien/eye_icon.svg' %}" alt="" @click="passwortAnzeigen()">
+                    <as-textfield label="Passwort" type="password" v-model="benutzer.passwort"></as-textfield>
+                </div>
+            </as-block>
+
+
+
+
+            <as-button-bar :link="false" label="Registrieren" @click="speichern()"></as-button-bar>
+        </as-tabs>
+    </div>
+
+    <script src="{% static 'components/textfield/component.js' %}"></script>
+    <script src="{% static 'components/buttonBar/component.js' %}"></script>
+    <script src="{% static 'components/tabs/component.js' %}"></script>
+    <script src="{% static 'components/banner/component.js' %}"></script>
+    <script src="{% static 'components/dropdown/component.js' %}"></script>
+    <script src="{% static 'components/block/component.js' %}"></script>
+    <script src="{% static 'page/register/scoped-javascript.js' %}"></script>
+</body>
+</html>

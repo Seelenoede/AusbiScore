@@ -3,8 +3,30 @@
     width: 300px;
     margin: 50px auto;
 }
-.asl_buttonBar_recht
+#as_page_anmeldung .asl_logo
+{
+    text-align: center;
+}
+#as_page_anmeldung .asl_logo img
+{
+    width: 200px;
+    margin: 50px 0;
+}
+#as_page_anmeldung .asl_buttonBar_recht
 {
     float: right;
     margin: 0;
+}
+#as_page_anmeldung #asl_eye_passwort
+{
+    position: relative;
+}
+#as_page_anmeldung #asl_eye_passwort > img
+{
+    width: 18px;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    z-index: 10;
+    cursor:pointer;
 }

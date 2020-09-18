@@ -6,8 +6,8 @@ new Vue({
         [
             {active:true, visible:true, disabled:false, loaded:false, errorText:"", name:"tab1", label:""}
         ],
-        user:{value:"", error:""},
-        passwort:{value:"", error:""}
+        user:{value:"Testuser", error:""},
+        passwort:{value:"1234", error:""}
     },
     mounted:function()
     {
@@ -18,8 +18,31 @@ new Vue({
     },
     methods:
     {
-        anmelden:function () {
-            // hier wird die Verbindung mit dem Server hergestellt
+        anmelden:function ()
+        {
+            let anmeldeDaten={user:this.user.value, passwort:this.passwort.value};
+            let success = false;
+            axios.post('./anmeldung', anmeldeDaten).then(function (response) {
+                console.log(response);
+                if(response.status = 200) {
+                    window.location.href = '/uebersicht/';
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        },
+        passwortAnzeigen:function()
+        {
+            let input= $("#as_page_anmeldung #asl_eye_passwort input");
+            if (input.attr("type") === "password")
+            {
+                input.attr("type", "text");
+            }
+            else
+            {
+                input.attr("type", "password");
+            }
         }
     }
 

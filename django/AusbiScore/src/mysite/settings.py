@@ -25,7 +25,12 @@ SECRET_KEY = 'bw*jbmkje-%si-t*raouexj=b@z@c5o^wkl+x1t4%+4!jpqj0g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '192.168.43.187:8000',
+    '192.168.43.187',
+    '127.0.0.1',
+    '192.168.2.102',
+    'seelenoede.hopto.org']
 
 
 # Application definition
@@ -34,6 +39,7 @@ INSTALLED_APPS = [
     # my apps
     'anmeldung',
     'wochenuebersicht', 
+    'register',
     
     # django apps
     'django.contrib.admin',
@@ -133,3 +139,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "web"),
     os.path.join(BASE_DIR, "static"),
 ]
+
+APPEND_SLASH = False
