@@ -1,0 +1,8 @@
+Testuser = '1234'
+Admin = 'Admin'
+AlexH = 'Kaffee'
+YamilkaA = '1337'
+PaulMB = 'Projektleiter'
+LarissaK = '9988771122'
+Itachi = 'Yasuo'
+
