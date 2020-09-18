@@ -23,7 +23,7 @@ from register.views import register_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', anmelde_view),
-	path('uebersicht/', uebersicht_view)
+	path('uebersicht/', uebersicht_view),
     path('uebersicht', uebersicht_view),
 	path('register/', register_view),
     path('anmeldung', anmeldung),
