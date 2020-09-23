@@ -30,8 +30,8 @@ ALLOWED_HOSTS = [
     '192.168.43.187',
     '127.0.0.1',
     '192.168.2.102',
-    'seelenoede.hopto.org']
-
+    'seelenoede.hopto.org',
+    '127.0.0.1:8000']
 
 # Application definition
 
@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'anmeldung',
     'wochenuebersicht', 
     'register',
+    'leistung',
+    'wocheneintrag',
+
     
     # django apps
     'django.contrib.admin',
@@ -84,15 +87,28 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'AusbiScore',
+#         'USER': 'ausbiscore',
+#         'PASSWORD': 'pi',
+#         'HOST': 'localhost',
+#     }
+# }
+
+#LARI SETTINGS:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'AusbiScore',
-        'USER': 'ausbiscore',
-        'PASSWORD': 'pi',
+        'NAME': 'ausbiscore',
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
+
 
 
 # Password validation

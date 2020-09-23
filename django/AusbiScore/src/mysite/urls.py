@@ -18,14 +18,17 @@ from django.urls import path
 from anmeldung.views import anmelde_view, anmeldung
 from wochenuebersicht.views import uebersicht_view
 from register.views import register_view
+from wocheneintrag.views import wocheneintrag
+
 # from bearbeiten.views import bearbeiten_view #TODO
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', anmelde_view),
-	path('uebersicht/', uebersicht_view),
+    path('uebersicht/', uebersicht_view),
     path('uebersicht', uebersicht_view),
-	path('register/', register_view),
+    path('register/', register_view),
     path('anmeldung', anmeldung),
-	# path ('bearbeiten', bearbeiten_view ) #TODO
+    path('wocheneintrag', wocheneintrag)
+    # path ('bearbeiten', bearbeiten_view ) #TODO
 ]
