@@ -30,10 +30,9 @@
                 <div><a href="{% static 'page/wocheneintrag/page.html' %}">+</a></div>
                 <div v-if="listTage.length > 0 " v-for="week in listWochen">
 
-                    <!--TODO: Das muss vueJS machen / ALEX / YAMI-->
+                    <!--TODO: Change Vue JS configuration. ALEX / YAMI-->
                     <!--<div>{{week.wochenstart}} bis {{week.wochenende}}</div>-->
-                    <div>xxxxx bis xxxxxx</div>
-
+                                        <div>[[week.wochenstart]] bis [[week.wochenende]]</div>
 
                     <div><div v-if="week.istVollstaendig === '1'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">vollständig</li></div><div v-else="week.istVollstaendig === '0'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">offene Einträge</li></div></div>
                     <div>
