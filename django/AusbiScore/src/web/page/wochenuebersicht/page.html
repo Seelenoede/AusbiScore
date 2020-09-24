@@ -29,7 +29,12 @@
             <div class="as_container_wochen">
                 <div><a href="{% static 'page/wocheneintrag/page.html' %}">+</a></div>
                 <div v-if="listTage.length > 0 " v-for="week in listWochen">
-                    <div>{{week.wochenstart}} bis {{week.wochenende}}</div>
+
+                    <!--TODO: Das muss vueJS machen / ALEX / YAMI-->
+                    <!--<div>{{week.wochenstart}} bis {{week.wochenende}}</div>-->
+                    <div>xxxxx bis xxxxxx</div>
+
+
                     <div><div v-if="week.istVollstaendig === '1'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">vollständig</li></div><div v-else="week.istVollstaendig === '0'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">offene Einträge</li></div></div>
                     <div>
                         <a href="{% static 'page/wocheneintrag/page.html' %}"><img src="{% static 'medien/edit_icon_black_noLine.svg' %}"/>Bearbeiten</a>
@@ -50,6 +55,6 @@
     <script src="{% static 'components/buttonBar/component.js' %}"></script>
     <script src="{% static 'components/tabs/component.js' %}"></script>
     <script src="{% static 'components/banner/component.js' %}"></script>
-    <script src="{% static 'page/wochenuebersicht/scoped-javascript.js' %}"></script>
+    <script src="scoped-javascript.js"></script>
 </body>
 </html>

@@ -41,39 +41,15 @@ new Vue({
                     ]
             },
         //todo: aus der Datenbank holen
+
             listTage:
+                 //{tagId:"1", datum:"2020-09-14", istVollstaendig: "1"},
                 [
-                    {tagId:"1", datum:"2020-09-14", istVollstaendig: "1"},//mo
-                    {tagId:"2", datum:"2020-09-15", istVollstaendig: "1"},
-                    {tagId:"3", datum:"2020-09-16", istVollstaendig: "1"},
-                    {tagId:"4", datum:"2020-09-17", istVollstaendig: "1"},
-                    {tagId:"5", datum:"2020-09-18", istVollstaendig: "1"},
-                    {tagId:"6", datum:"2020-09-19", istVollstaendig: "1"},
-                    {tagId:"7", datum:"2020-09-20", istVollstaendig: "1"},
-                    {tagId:"8", datum:"2020-09-21", istVollstaendig: "0"},//mo
-                    {tagId:"9", datum:"2020-09-22", istVollstaendig: "0"},
-                    {tagId:"10", datum:"2020-09-23", istVollstaendig: "1"},
-                    {tagId:"11", datum:"2020-09-24", istVollstaendig: "1"},
-                    {tagId:"12", datum:"2020-09-25", istVollstaendig: "1"},
-                    {tagId:"13", datum:"2020-09-26", istVollstaendig: "1"},
-                    {tagId:"14", datum:"2020-09-27", istVollstaendig: "1"},
-                    {tagId:"15", datum:"2020-09-28", istVollstaendig: "1"},//mo
-                    {tagId:"16", datum:"2020-09-29", istVollstaendig: "1"},
-                    {tagId:"17", datum:"2020-09-30", istVollstaendig: "1"},
-                    {tagId:"18", datum:"2020-10-01", istVollstaendig: "1"},
-                    {tagId:"19", datum:"2020-10-02", istVollstaendig: "1"},
-                    {tagId:"20", datum:"2020-10-03", istVollstaendig: "1"},
-                    {tagId:"21", datum:"2020-10-04", istVollstaendig: "1"},
-                    {tagId:"22", datum:"2020-10-05", istVollstaendig: "1"},//mo
-                    {tagId:"23", datum:"2020-10-06", istVollstaendig: "1"},
-                    {tagId:"24", datum:"2020-10-07", istVollstaendig: "1"},
-                    {tagId:"25", datum:"2020-10-08", istVollstaendig: "0"},
-                    {tagId:"26", datum:"2020-10-09", istVollstaendig: "1"},
-                    {tagId:"27", datum:"2020-10-10", istVollstaendig: "1"},
-                    {tagId:"28", datum:"2020-10-11", istVollstaendig: "1"}
+                {% for a in bericht_data %}
+                    {tagId: "{{a.0}}", datum: "{{a.1}}", istVollstaendig: "{{a.2}}"},
+                {% endfor %}
                 ],
             listWochen: []
-
     },
     mounted:function()
     {
@@ -117,19 +93,24 @@ new Vue({
             let wochenende;
             let woche;
 
+            console.log("THIS PART IS APPEARING");
+            console.log(me);
 
             for(let i = 0; i < me.listTage.length; i++)
             {
+
                 let istVollstaendigWoche = "0";
                 //der Datumsstring aus der Datenbank wird in den Datentyp Date konvertiert und in einen Wochentag umgewandelt
                 //Sonntag = 0, Montag = 1, Dienstag = 2, Mittwoch = 3, Donnerstag = 4, Freitag = 5, Samstag = 6
-                wochentag = me.toDate(me.listTage[i].datum).getDay();
+                let current_day = me.toDate(me.listTage[i].datum);
+                wochentag = current_day.getDay();
 
                 //hier wird geprüft, ob der Tag ein Montag ist
                 if(wochentag === 1)
                 {
+                    console.log("there is a monday");
                     woche = {};
-                    wochenstart = me.toGermanDateFormate(me.toDate(me.listTage[i].datum));
+                    wochenstart = me.toGermanDateFormate(current_day);
                     //Prüfung des Tages auf Vollständigkeit
                     if(me.listTage[i].istVollstaendig === "1")
                     {
@@ -156,10 +137,18 @@ new Vue({
                     //     i = i + 6;
                     //     wochenende = me.toGermanDateFormate(me.toDate(me.listTage[i].datum));
                     // }
+                    //ToDo: FixMe: only works with full weeks in backend!!!
                     i = i + 6;
+
+                    console.log("debug: THIS PART IS NOT APPEARING YET");
                     wochenende = me.toGermanDateFormate(me.toDate(me.listTage[i].datum));
+                    console.log("wochenende dump: " + wochenende);
+
                     woche = {"wochenstart":"" + wochenstart, "wochenende":"" + wochenende, "istVollstaendig":"" + istVollstaendigWoche};
                     me.listWochen.push(woche);
+                }
+                else {
+                console.log("There is not monday");
                 }
             }
         },
