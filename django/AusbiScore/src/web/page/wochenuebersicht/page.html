@@ -32,7 +32,9 @@
 
                     <!--TODO: Change Vue JS configuration. ALEX / YAMI-->
                     <!--<div>{{week.wochenstart}} bis {{week.wochenende}}</div>-->
-                                        <div>[[week.wochenstart]] bis [[week.wochenende]]</div>
+                    {% verbatim %}
+                    <div>{{week.wochenstart}} bis {{week.wochenende}}</div>
+                    {% endverbatim %}
 
                     <div><div v-if="week.istVollstaendig === '1'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">vollständig</li></div><div v-else="week.istVollstaendig === '0'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">offene Einträge</li></div></div>
                     <div>
