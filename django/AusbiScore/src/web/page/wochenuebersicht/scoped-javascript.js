@@ -17,36 +17,45 @@ new Vue({
             {
                 //todo: aus der Datenbank holen
                 monat:[
-                    {code:"01", decode:"Januar"},
-                    {code:"02", decode:"Februar"},
-                    {code:"03", decode:"März"},
-                    {code:"04", decode:"April"},
-                    {code:"05", decode:"Mai"},
-                    {code:"06", decode:"Juni"},
-                    {code:"07", decode:"Juli"},
-                    {code:"08", decode:"August"},
-                    {code:"09", decode:"September"},
-                    {code:"10", decode:"Oktober"},
-                    {code:"11", decode:"November"},
-                    {code:"12", decode:"Dezember"}
+//                    {code:"01", decode:"Januar"},
+//                    {code:"02", decode:"Februar"},
+//                    {code:"03", decode:"März"},
+//                    {code:"04", decode:"April"},
+//                    {code:"05", decode:"Mai"},
+//                    {code:"06", decode:"Juni"},
+//                    {code:"07", decode:"Juli"},
+//                    {code:"08", decode:"August"},
+//                    {code:"09", decode:"September"},
+//                    {code:"10", decode:"Oktober"},
+//                    {code:"11", decode:"November"},
+//                    {code:"12", decode:"Dezember"}
+
+                   {% for data in monat %}
+                       {code: "{{data}}", decode: "{{data}}"},
+                   {% endfor %}
+
                     ],
                 //todo: aus der DB?
                 jahr:[
-                    {code:"2016", decode:"2016"},
-                    {code:"2017", decode:"2017"},
-                    {code:"2018", decode:"2018"},
-                    {code:"2019", decode:"2019"},
-                    {code:"2020", decode:"2020"},
-                    {code:"2021", decode:"2021"}
+//                    {code:"2016", decode:"2016"},
+//                    {code:"2017", decode:"2017"},
+//                    {code:"2018", decode:"2018"},
+//                    {code:"2019", decode:"2019"},
+//                    {code:"2020", decode:"2020"},
+//                    {code:"2021", decode:"2021"}
+
+                       {% for data in jahr %}
+                           {code: "{{data}}", decode: "{{data}}"},
+                       {% endfor %}
                     ]
             },
-        //todo: aus der Datenbank holen
+
 
             listTage:
                  //{tagId:"1", datum:"2020-09-14", istVollstaendig: "1"},
                 [
-                {% for a in bericht_data %}
-                    {tagId: "{{a.0}}", datum: "{{a.1}}", istVollstaendig: "{{a.2}}"},
+                {% for data in bericht_data %}
+                    {tagId: "{{data.0}}", datum: "{{data.1}}", istVollstaendig: "{{data.2}}"},
                 {% endfor %}
                 ],
             listWochen: []

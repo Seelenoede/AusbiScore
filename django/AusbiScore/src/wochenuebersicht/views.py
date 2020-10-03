@@ -19,5 +19,27 @@ def uebersicht_js_view(request):
 
     bericht_data = query_function('SELECT `Tag`, DATE_FORMAT(`Datum`, "%Y-%m-%d") as Datum, `Ist_Vollständig` FROM bericht')
     print(bericht_data)
-    return render(request, 'page/wochenuebersicht/scoped-javascript.js',{"bericht_data": bericht_data})
+
+
+    monat = query_function('SELECT DISTINCT DATE_FORMAT(Datum,"%M") FROM bericht')
+    print(monat)
+    monat_final = []
+    for i in monat:
+        j=0 #TODO: CREATE A LOOP to increase j
+        formated_month = monat[j][0]
+        monat_final.append(formated_month)
+
+    print(monat_final)
+
+    jahr = query_function('SELECT DISTINCT DATE_FORMAT(Datum,"%Y") FROM bericht')
+    print(jahr)
+    jahr_final = []
+    for i in jahr:
+        j=0 #TODO CREATE A LOOP to increase j
+        formated_jahr = jahr[j][0]
+        jahr_final.append(formated_jahr)
+
+    print(jahr_final)
+
+    return render(request, 'page/wochenuebersicht/scoped-javascript.js',{"bericht_data": bericht_data, "monat": monat_final, "jahr": jahr_final})
 
