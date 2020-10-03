@@ -30,8 +30,6 @@
                 <div><a href="{% static 'page/wocheneintrag/page.html' %}">+</a></div>
                 <div v-if="listTage.length > 0 " v-for="week in listWochen">
 
-                    <!--TODO: Change Vue JS configuration. ALEX / YAMI-->
-                    <!--<div>{{week.wochenstart}} bis {{week.wochenende}}</div>-->
                     {% verbatim %}
                     <div>{{week.wochenstart}} bis {{week.wochenende}}</div>
                     {% endverbatim %}
