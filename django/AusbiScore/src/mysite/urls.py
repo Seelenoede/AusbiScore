@@ -32,7 +32,7 @@ urlpatterns = [
     path('anmeldung', anmeldung),
     path('wocheneintrag', wocheneintrag),
     path('wocheneintrag', wocheneintrag),
-    path('wocheneintrag/scoped-javascript.js',uebersicht_js_view )
+    path('wocheneintrag/scoped-javascript.js',wocheneintrag_js )
 
     # path ('bearbeiten', bearbeiten_view ) #TODO
 ]
