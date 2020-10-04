@@ -18,7 +18,7 @@ from django.urls import path
 from anmeldung.views import anmelde_view, anmeldung
 from wochenuebersicht.views import uebersicht_view, uebersicht_js_view
 from register.views import register_view
-from wocheneintrag.views import wocheneintrag
+from wocheneintrag.views import wocheneintrag, wocheneintrag_js
 
 # from bearbeiten.views import bearbeiten_view #TODO
 
@@ -30,6 +30,9 @@ urlpatterns = [
     path('uebersicht', uebersicht_view),
     path('register/', register_view),
     path('anmeldung', anmeldung),
-    path('wocheneintrag', wocheneintrag)
+    path('wocheneintrag', wocheneintrag),
+    path('wocheneintrag', wocheneintrag),
+    path('wocheneintrag/scoped-javascript.js',uebersicht_js_view )
+
     # path ('bearbeiten', bearbeiten_view ) #TODO
 ]
