@@ -15,37 +15,37 @@ new Vue({
         ],
         eintraege: //Dummi Daten zum Testen
         [
-//            {
-//                besonderes:{value:"", error:""},
-//                lernfeld:{value:"LF1", error:""},
-//                stunden:{value:"1", error:""},
-//                eintrag:{value:"sdcsc wcwec wedw", error:""},
-//                isBearbeitet:true
-//            },
-//            {
-//                besonderes:{value:"adsasaxa", error:""},
-//                lernfeld:{value:"LF4", error:""},
-//                stunden:{value:"2+3", error:""},
-//                eintrag:{value:"wwwwwwwww wwwwwwwwww sss", error:""},
-//                isBearbeitet:false
-//            },
-//            {
-//                besonderes:{value:"", error:""},
-//                lernfeld:{value:"Wirtschaftslehre", error:""},
-//                stunden:{value:"4-6", error:""},
-//                eintrag:{value:"wecwc evwe   qwww", error:""},
-//                isBearbeitet:false}
-
-
-            {% for data in bericht_data %}
             {
-                besonderes:{value:"{{data.0}}", error:""},
-                lernfeld:{value:"{{data.1}}", error:""},
-                stunden:{value:"{{data.2}}", error:""},
-                eintrag:{value:"{{data.3}}", error:""},
-                isBearbeitet:"{{data.4}}"
+                besonderes:{value:"", error:""},
+                lernfeld:{value:"LF1", error:""},
+                stunden:{value:"1", error:""},
+                eintrag:{value:"sdcsc wcwec wedw", error:""},
+                isBearbeitet:true
             },
-            {% endfor %}
+            {
+                besonderes:{value:"adsasaxa", error:""},
+                lernfeld:{value:"LF4", error:""},
+                stunden:{value:"2+3", error:""},
+                eintrag:{value:"wwwwwwwww wwwwwwwwww sss", error:""},
+                isBearbeitet:false
+            },
+            {
+                besonderes:{value:"", error:""},
+                lernfeld:{value:"Wirtschaftslehre", error:""},
+                stunden:{value:"4-6", error:""},
+                eintrag:{value:"wecwc evwe   qwww", error:""},
+                isBearbeitet:false}
+
+                //Code for getting data from databank:
+//            {% for data in bericht_data %}
+//            {
+//                besonderes:{value:"{{data.0}}", error:""},
+//                lernfeld:{value:"{{data.1}}", error:""},
+//                stunden:{value:"{{data.2}}", error:""},
+//                eintrag:{value:"{{data.3}}", error:""},
+//                isBearbeitet:"{{data.4}}"
+//            },
+//            {% endfor %}
 
 
         ],
