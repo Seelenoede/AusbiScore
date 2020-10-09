@@ -84,32 +84,18 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+Database
+https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'AusbiScore',
-#         'USER': 'ausbiscore',
-#         'PASSWORD': 'pi',
-#         'HOST': 'localhost',
-#     }
-# }
-
-#LARI SETTINGS:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ausbiscore',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': 'AusbiScore',
+        'USER': 'ausbiscore',
+        'PASSWORD': 'pi',
         'HOST': 'localhost',
-        'PORT': '3306'
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
