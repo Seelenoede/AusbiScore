@@ -37,7 +37,7 @@
                     <div><div v-if="week.istVollstaendig === '1'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">vollständig</li></div><div v-else="week.istVollstaendig === '0'"><li :class="week.istVollstaendig ==='1'?'':'as_incomplete'">offene Einträge</li></div></div>
                     <div>
                         <a href="{% static 'page/wocheneintrag/page.html' %}"><img src="{% static 'medien/edit_icon_black_noLine.svg' %}"/>Bearbeiten</a>
-                        <a href="javascript:;" @click="getWeek();"><img src="{% static 'medien/ansicht_icon_black.svg' %}"/>Einsehen</a>
+<!--                        <a href="javascript:;"><img src="{% static 'medien/ansicht_icon_black.svg' %}"/>Einsehen</a>-->
                         <a href="javascript:;" target="_blank"><img src="{% static 'medien/export_icon_black.svg' %}"/>Exportieren</a>
                     </div>
                 </div>

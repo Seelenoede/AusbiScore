@@ -17,23 +17,23 @@ new Vue({
         [
             {
                 besonderes:{value:"", error:""},
-                lernfeld:{value:"LF1", error:""},
-                stunden:{value:"1", error:""},
-                eintrag:{value:"sdcsc wcwec wedw", error:""},
+                lernfeld:{value:"", error:""},
+                stunden:{value:"", error:""},
+                eintrag:{value:"", error:""},
                 isBearbeitet:true
             },
             {
-                besonderes:{value:"adsasaxa", error:""},
-                lernfeld:{value:"LF4", error:""},
-                stunden:{value:"2+3", error:""},
-                eintrag:{value:"wwwwwwwww wwwwwwwwww sss", error:""},
+                besonderes:{value:"", error:""},
+                lernfeld:{value:"LF6", error:""},
+                stunden:{value:"3", error:""},
+                eintrag:{value:"Programmierung mit Java", error:""},
                 isBearbeitet:false
             },
             {
                 besonderes:{value:"", error:""},
-                lernfeld:{value:"Wirtschaftslehre", error:""},
-                stunden:{value:"4-6", error:""},
-                eintrag:{value:"wecwc evwe   qwww", error:""},
+                lernfeld:{value:"Ethik", error:""},
+                stunden:{value:"2", error:""},
+                eintrag:{value:"Wirtschaftsethik", error:""},
                 isBearbeitet:false}
 
                 //Code for getting data from databank:

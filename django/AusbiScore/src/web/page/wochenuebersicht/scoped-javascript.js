@@ -10,7 +10,7 @@ new Vue({
         score:"",
         eingaben:
             {
-                monat:{value:"10", error:""},
+                monat:{value:"", error:""},
                 jahr:{value:"", error:""}
             },
         auswahllisten:
