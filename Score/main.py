@@ -23,7 +23,8 @@ def get_score_total(total_ziel, total_berichtshet):
 
 for file_name in input_dir:  # Execute this for all files in the input folder
     with open('input/' + file_name, 'r') as json_file:
-        file_content = json.load(json_file)
+        file_content = json.load(json_file)   # load read the data from that object, and use that string to create an
+        # object
 
         for line in file_content:
             # Ziel
@@ -51,9 +52,9 @@ for file_name in input_dir:  # Execute this for all files in the input folder
 
             total_ziel = total_wissen_anwenden + total_etwas_gelernt + total_Kommunikation + total_eigeninitiative + \
                          total_motivation
-            total_berichtshet = total_puenktlich + total_taeglich
+            total_berichtsheft = total_puenktlich + total_taeglich
 
-            total_score = get_score_total(total_ziel, total_berichtshet)
+            total_score = get_score_total(total_ziel, total_berichtsheft)
 
             # Debugg:
             # print(current_wissen_anwenden, total_wissen_anwenden)
@@ -62,4 +63,4 @@ for file_name in input_dir:  # Execute this for all files in the input folder
             # print(current_eigeninitiative, total_eigeninitiative)
             # print(current_motivation, total_motivation)
 
-            print(f"Score Berichtsheft: {total_berichtshet}, Score Ziel: {total_ziel} , Total Score: {total_score}")
+            print(f"Score Berichtsheft: {total_berichtsheft}, Score Ziel: {total_ziel} , Total Score: {total_score}")
